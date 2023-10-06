@@ -1,0 +1,77 @@
+#form{
+    border-radius: 0.5rem;
+    background: #f2f2f2;
+    box-shadow: inset 2px 2px 5px #c6c6c6,
+            inset -2px -2px 5px #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.938rem;
+    align-items: center;
+
+}
+h1{
+    color: #474747;
+    font-weight: 500;
+    font-size: 1.875rem;
+}
+.boxInput{
+    padding: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.188rem;
+}
+#to-quest{
+    padding-top: 0;
+}
+input{
+    padding-left: 1.563rem;
+    border: none;
+    color:rgb(97, 97, 97);
+    height: 3.75rem;
+    width: 90%;
+    font-size: 1.063rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: #f5f5f5;
+    box-shadow: inset 8px 8px 16px #e4e4e4,
+            inset -8px -8px 16px #ffffff;
+}
+input:focus {
+    outline: solid 2px #2dbcf8;
+}
+::placeholder {
+    font-size: 17px;
+}
+.button-to-quest{
+    padding-left:50px;
+    padding-right:50px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 500;
+    color: #525252;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #f5f5f5;
+    box-shadow:  2px 2px 6px #b1b1b1,
+             -2px -2px 6px #ffffff;
+}
+#seguir{
+    width: 90%;
+    height: 75px;
+    text-transform: uppercase;
+}
+.infos{
+    color: #525252;
+    text-transform: uppercase;
+}
+

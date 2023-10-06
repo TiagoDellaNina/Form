@@ -1,0 +1,319 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:16px;    
+}
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #35BDF2;
+    background: rgb(23,54,115);
+    background: rgb(23,54,115);
+    background: -moz-linear-gradient(318deg, rgba(23,54,115,1) 0%, rgba(23,54,115,1) 29%, rgba(45,188,248,1) 100%);
+    background: -webkit-linear-gradient(318deg, rgba(23,54,115,1) 0%, rgba(23,54,115,1) 29%, rgba(45,188,248,1) 100%);
+    background: linear-gradient(318deg, rgba(23,54,115,1) 0%, rgba(23,54,115,1) 29%, rgba(45,188,248,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#173673",endColorstr="#2dbcf8",GradientType=1);
+    height: 100%;
+}
+#questions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.25rem;
+    padding: 2.188rem;
+}
+.container{
+    width: 70%;
+    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+.quest{
+    display: none;
+}
+.quest-result{
+    display: none;
+}
+.quest, .quest-result{
+    border-radius: 0.5rem;
+    background: #f2f2f2;
+    box-shadow: inset 0.125rem 0.125rem 0.313rem #c6c6c6,
+            inset -0.125rem -0.125rem 0.313rem #ffffff;
+
+    flex-direction: column;
+    border-radius: 0.938rem;
+    align-items: center;
+
+}
+.box{
+    padding: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.188rem;
+}
+.bottom-line{
+    border-bottom: solid #ccc 0.063rem;
+}
+.tittle, .answer-tittle{
+    color: #525252;
+    height: 3.75rem;
+    width: 90%;
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+.tittle{
+    color:rgb(97, 97, 97);
+    background: #f5f5f5;
+    box-shadow: inset 0.5rem 0.5rem 1rem #e4e4e4,
+            inset -0.5rem -0.5rem 1rem #ffffff;
+}
+.answer-tittle{
+    background: #f1f1f1;
+    box-shadow:  0.125rem 0.125rem 0.375rem #c4c4c4,
+             -0.125rem -0.125rem 0.375rem #ffffff;
+}
+.answerText{
+    color: #525252;
+}
+.skills{
+    color:#5e5e5e;
+    font-weight: 400;
+    padding: 0.625rem;
+    text-align: start;
+}
+.skills, .answerText{
+    text-transform:uppercase;
+    text-shadow:0.063rem 0.063rem 0.188rem #0000000e;
+    word-spacing: 0.625;
+    text-align: center;
+}
+.options{
+    gap:2.5rem;
+}
+.options{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;   /*voltar para space-bettwen*/
+    align-items: center;
+}
+.answer{
+    font-size: 0.938rem;
+    font-weight: 900;
+    color: #525252;
+}
+.opt{
+    font-size: 2.188rem;
+    color: #525252;
+    font-weight: 400;
+}
+.opt, .button{
+    cursor: pointer;
+}
+.opt, .button, .answer{
+    text-transform: uppercase;
+    height: 4.688rem;
+    width: 4.688rem;
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: #f1f1f1;
+    box-shadow:  0.125rem 0.125rem 0.375rem #c4c4c4,
+             -0.125rem -0.125rem 0.375rem #ffffff;
+}
+.opt-choosed{
+    background: #2dbcf8;
+    box-shadow: inset 5.5rem 5.5rem 1rem #28a7dd,
+            inset -5.5rem -5.5rem 1rem #32d1ff;
+    color:white;
+}
+
+.opt-none{
+    display:none;
+}
+.opt-closed{
+    color:#ccc;
+}
+
+.opt-on{
+    display:block;
+}
+.opt-off{
+    border:solid 0.188rem #555;
+    background-color: #ccc;
+}
+.down-box{    
+    display:none;
+}
+.down-box-result{    
+    display:none;
+}
+.down-box, .down-box-result{
+    background: #f0f0f0;
+    padding: 3%;
+    width: 100%;
+    align-items: center;
+}
+.turn-page {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap:2.5rem;
+}
+.button{
+    color:#555555;
+    font-size: 1.875rem;
+    font-weight: 500;
+    border:none;
+    border-radius: 0.5rem;
+    background: #ececec;
+    box-shadow:  0.188rem 0.188rem 0.375rem #c4c4c4,
+             -0.188rem -0.188rem 0.375rem #ffffff;
+    text-align: center;
+}
+
+footer{
+    height: 6.25rem;
+}
+.instructions{
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+.instructions p, .instructions li{
+    color:#525252;
+    width: 100%;
+}
+.instructions h1{
+    color:#525252;
+}
+.instructions .instruct{
+    border-radius: 0.500rem;
+    color:#525252;
+}
+.instructions .instruct-closed{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+        background: #f0f0f0;
+    box-shadow:  0.125rem 0.125rem 0.375rem #c4c4c4,
+             -0.125rem -0.125rem 0.375rem #ffffff;
+    padding: 0.625rem;
+    
+}
+.instructions .instruction-open{
+    color:inherit;
+}
+.instructions li{
+    list-style: none;
+    margin-left: 1rem;
+}
+#instruction-p{
+    overflow: hidden;
+    transition: height 0.5s linear;
+    display: flex;
+    flex-direction: column;
+    gap: 0.438rem;
+}
+#instruction-p ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.338rem;
+}
+.close{
+    height: 0;
+    display: none;
+    padding: 0;
+}
+.button-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.button-line{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+#button-closer{
+    overflow: hidden;
+    transition: height 0.5s linear;
+}
+.noselect {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #1b3585;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #28a7dd;
+   }
+   
+   .noselect, .noselect span {
+    transition: 200ms;
+   }
+   
+   .noselect .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+   }
+   
+   .noselect .icon {
+    position: absolute;
+    border-left: 1px solid #109bd6;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .noselect svg {
+    width: 15px;
+    fill: #eee;
+   }
+   
+   .noselect:hover {
+    background: #1b3585;
+   }
+   
+   .noselect:hover .text {
+    color: transparent;
+   }
+   
+   .noselect:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+   }
+   
+   .noselect:focus {
+    outline: none;
+   }
+   
+   .noselect:active .icon svg {
+    transform: scale(0.8);
+   }

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Orthodontic</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/medias.css">
+</head>
+
+<body>
+    <section id="banner">
+    </section>
+    <section id="questions">
+        <div class="container">
+            <div id="form">
+                <form id="form-quest" class="boxInput" action="https://formsubmit.co/tiagodellaninaprod@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://www.linkedin.com/in/tiago-della-nina-a23b44230/">
+                    <input type="hidden" name="_autoresponse" value="Muito obrigado por responder este formulário. Segue a baixo as informações enviadas e o resultado do teste.">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <h1 class="infos">Informações pessoais</h1>
+                    <input type="text" id="name" name="Nome" placeholder="Nome Completo" required>
+                    <input type="email" id="email" name="Email" placeholder="Email" required>
+                    <input type="text" id="numeroTelefone" name="Telefone" placeholder="(XX) XXXXX-XXXX" oninput="formatarTelefone(this)">
+                    <input type="hidden" id="dSum" name="Executor">
+                    <input type="hidden" id="iSum" name="Comunicador">
+                    <input type="hidden" id="sSum" name="Planejador">
+                    <input type="hidden" id="cSum" name="Analista">
+                </form>
+                <div id="to-quest" class="boxInput">
+                    <div class="button-to-quest" id="seguir" onclick="takeNameEmail()">Seguir</div>
+                </div>
+            </div>
+            <div id="quest-box" class="quest">
+                <div id="instructions-box" class="box bottom-line instructions">
+                    <div class="button-line">
+                        <strong class="instruct" onclick="instructionBoxOpenner()"><h1 class="instruction-open">INSTRUÇÕES</h1></strong>
+                    </div>
+                    <div id="instruction-p">
+                        <p>Ordene de <strong>1</strong> a <strong>4</strong> as diferentes <strong>características comportamentais</strong>.</p>
+                        <ul>
+                            <li><strong>4</strong> Se você se identifica totalmente</li>
+                            <li><strong>3</strong> Se você se identifica, mas não tanto</li>
+                            <li><strong>2</strong> Se identifica pouco</li>
+                            <li><strong>1</strong> Não se identifica</li>
+                        </ul>
+                        <p>Após clique em <strong>"Seguir"</strong>.</p>
+                        <p>Ao final, seu resultado será apresentado</p>
+                        <p>Então <strong>Envie o formulario</strong></p>
+                    </div>
+                    <div class="button-area">
+                        <div id="button-closer" onclick="instructionBoxCloser()">
+                            <button id="noselect" class="noselect"><span class="text">Fechar</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Questão 1 -->
+                <div id="question1" class="box bottom-line">
+                    <div class="tittle">
+                        <h2 class="skills">Autoconfiante, Idependente e Dominante</h2>
+                    </div>
+
+                    <nav id="optionsA" class="options">
+                        <li class="opt1 opt" onclick="dTakeButtonValue(1, this, '#optionsA')">1</li>
+                        <li class="opt2 opt" onclick="dTakeButtonValue(2, this, '#optionsA')">2</li>
+                        <li class="opt3 opt" onclick="dTakeButtonValue(3, this, '#optionsA')">3</li>
+                        <li class="opt4 opt" onclick="dTakeButtonValue(4, this, '#optionsA')">4</li>
+                    </nav>
+                </div>
+
+                <!-- Questão 2 -->
+                <div id="question2" class="box bottom-line">
+                    <div class="tittle">
+                        <h2 class="skills">Comunicativo, Alegre e Extrovertido</h2>
+                    </div>
+
+                    <nav id="optionsB" class="options">
+                        <li class="opt1 opt" onclick="iTakeButtonValue(1, this, '#optionsB')">1</li>
+                        <li class="opt2 opt" onclick="iTakeButtonValue(2, this, '#optionsB')">2</li>
+                        <li class="opt3 opt" onclick="iTakeButtonValue(3, this, '#optionsB')">3</li>
+                        <li class="opt4 opt" onclick="iTakeButtonValue(4, this, '#optionsB')">4</li>
+                    </nav>
+                </div>
+
+                <!-- Questão 3 -->
+                <div id="question3" class="box bottom-line">
+                    <div class="tittle">
+                        <h2 class="skills">Acolhedor, Amigável e Paciente</h2>
+                    </div>
+
+                    <nav id="optionsC" class="options">
+                        <li class="opt1 opt" onclick="sTakeButtonValue(1, this, '#optionsC')">1</li>
+                        <li class="opt2 opt" onclick="sTakeButtonValue(2, this, '#optionsC')">2</li>
+                        <li class="opt3 opt" onclick="sTakeButtonValue(3, this, '#optionsC')">3</li>
+                        <li class="opt4 opt" onclick="sTakeButtonValue(4, this, '#optionsC')">4</li>
+                    </nav>
+                </div>
+
+                <!-- Questão 4 -->
+                <div id="question4" class="box">
+                    <div class="tittle">
+                        <h2 class="skills">Autodisciplinado, Atento a detalhes e Diligente</h2>
+                    </div>
+
+                    <nav id="optionsD" class="options">
+                        <li class="opt1 opt" onclick="cTakeButtonValue(1, this, '#optionsD')">1</li>
+                        <li class="opt2 opt" onclick="cTakeButtonValue(2, this, '#optionsD')">2</li>
+                        <li class="opt3 opt" onclick="cTakeButtonValue(3, this, '#optionsD')">3</li>
+                        <li class="opt4 opt" onclick="cTakeButtonValue(4, this, '#optionsD')">4</li>
+                    </nav>
+                </div>
+            </div>
+            <div id="down-box" class="quest down-box">
+                <div class="turn-page">
+                    <div class="button" id="voltar" onclick="removeOptValue()">Voltar</div>
+                    <div class="button" id="seguir" onclick="selectedOptionsVerify()">Seguir</div>
+                </div>
+            </div>
+            <div id="quest-result" class="quest-result">
+                <!-- Result -->
+                <div id="" class="box">
+                    <div class="answer-tittle">
+                        <h2 class="answerText">Resultado de perfil</h2>
+                    </div>
+
+                    <nav id="" class="options result">
+                        <li id="answer1" class="answer">25% Executor</li>
+                        <li id="answer2" class="answer">25% Comunicador</li>
+                        <li id="answer3" class="answer">25% Planejador</li>
+                        <li id="answer4" class="answer">25% Analista</li>
+                    </nav>
+                </div>
+            </div>
+            <div id="down-box-result" class="quest-result down-box-result">
+                <div class="turn-page">
+                    <div class="button" id="enviar" onclick="formSubmit()">Enviar Formulário</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script1.js"></script>
+    <script src="assets/js/sendForm.js"></script>
+</body>
+
+</html>

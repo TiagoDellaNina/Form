@@ -1,0 +1,60 @@
+/*Form*/
+@media screen and (max-width: 600px) {
+    .infos{
+        font-size: 1.150rem;
+    }
+    .boxInput{
+      gap: 1.188rem;
+    }
+  }
+  .box{
+    gap:1rem;
+  }
+  .button{
+    font-size: 1.1rem;
+  }
+/*style*/
+@media screen and (max-width: 800px) {
+    .options{
+        gap: 1rem;
+    }
+    .result{
+      flex-direction: column;
+    }
+    .opt, .button, .answer {
+      width: 90%;
+      padding: 0.625rem;
+    }
+  }
+@media screen and (max-width:514px){
+  #instruction-p li{
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 321px) {
+  .infos{
+    text-align: center;
+  }
+}
+/*hover em @media to work just in desktops*/
+@media screen and (min-width:1280px){
+  .opt:hover{
+    background: #2dbcf8;
+    box-shadow: inset 0.5rem 0.5rem 1rem #28a7dd,
+            inset -0.5rem -0.5rem 1rem #32d1ff;
+    color:white;
+  }
+  .button:hover, .button-to-quest:hover{
+    background: #2dbcf8;
+    box-shadow: inset 0.5rem 0.5rem 1rem #28a7dd,
+            inset -0.5rem -0.5rem 1rem #32d1ff;
+    color:white;  
+  }
+  .instructions .instruct-closed:hover{
+    background: #2dbcf8;
+    box-shadow: inset 0.5rem 0.5rem 1rem #28a7dd,
+            inset -0.5rem -0.5rem 1rem #32d1ff;
+    cursor: pointer;
+    color:white;
+  }
+}
